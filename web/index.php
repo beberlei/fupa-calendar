@@ -19,7 +19,7 @@ $context = new RequestContext('/');
 $matcher = new UrlMatcher($routes, $context);
 
 try {
-    $parameters = $matcher->match($reqest->getPathInfo());
+    $parameters = $matcher->match($request->getPathInfo());
 
     if (!isset($parameters['club'])) {
         throw new NotFoundHttpException();
