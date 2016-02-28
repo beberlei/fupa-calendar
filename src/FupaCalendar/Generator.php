@@ -34,6 +34,7 @@ class Generator
             $teamName = trim($crawler->filter('.head_line h1')->text());
             $rows = $crawler->filter('.rows .row');
             $utcZone = new \DateTimeZone('UTC');
+            $berlinZone = new \DateTimeZone('Europe/Berlin');
 
             foreach ($rows as $element) {
                 $crawler = new Crawler($element);
@@ -53,7 +54,7 @@ class Generator
                     }
 
                     list ($day, $date) = explode(', ', $date);
-                    $start = DateTime::createFromFormat('d.m.Y H:i', sprintf('%s %s', $date, $time));
+                    $start = DateTime::createFromFormat('d.m.Y H:i', sprintf('%s %s', $date, $time), $berlinZone);
                     $start->setTimeZone($utcZone);
                     $end = clone $start;
                     $end = $start->modify('+105 minute');
