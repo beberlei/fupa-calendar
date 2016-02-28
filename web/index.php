@@ -28,7 +28,7 @@ try {
 
     $generator = new \FupaCalendar\Generator();
     $calendar = $generator->getCalendar($parameters['club']);
-    $response = new Response($calender->render(), 200, [
+    $response = new Response($calendar->render(), 200, [
         'Content-Type' => 'text/calendar; charset=utf-8',
         'Content-Disposition' => 'attachment; filename="' . $parameters['club'] . '.ics"'
     ]);
