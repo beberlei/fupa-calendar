@@ -9,6 +9,8 @@ use Symfony\Component\Routing\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
+$request = Request::createFromGlobals();
+
 $route = new Route('/{club}.ics');
 $routes = new RouteCollection();
 $routes->add('calendar', $route);
