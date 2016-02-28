@@ -1,0 +1,10 @@
+<?php
+
+use FupaCalendar\Generator;
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+$generator = new Generator();
+$calendar = $generator->getCalendar($argv[1]);
+
+echo $calendar->render();

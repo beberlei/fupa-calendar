@@ -1,0 +1,14 @@
+{
+    "autoload": {
+        "psr-0": {"FupaCalendar\\": "src/"}
+    },
+    "require": {
+        "symfony/http-foundation": "^3.0",
+        "symfony/routing": "^3.0",
+        "eluceo/ical": "^0.9.0",
+        "symfony/http-kernel": "^3.0",
+        "kriswallsmith/buzz": "^0.15.0",
+        "symfony/dom-crawler": "^3.0",
+        "symfony/css-selector": "^3.0"
+    }
+}
