@@ -60,7 +60,7 @@ class Generator
                     $end->setTimeZone($utcZone);
 
                     $vEvent = new Event();
-                    $vEvent->setDtStart($start)->setDtEnd($end)->setSummary(sprintf('Heimspiel: %s vs %s', $homeTeam, $awayTeam));
+                    $vEvent->setDtStart($start)->setDtEnd($end)->setSummary(sprintf('%s - %s', $homeTeam, $awayTeam));
 
                     $vCalendar->addComponent($vEvent);
                 } catch (\InvalidArgumentException $e) {
